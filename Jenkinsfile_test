@@ -1,0 +1,15 @@
+pipeline {
+    agent { label "$nodeName" }
+    stages {
+        stage('clean workspace') {
+          steps {
+            cleanWs()
+         }
+        }
+        stage('Checkout code') {
+           steps {
+             checkout([$class: 'GitSCM', branches: [[name: '*/shaharzi']], extensions: [], userRemoteConfigs: [[credentialsId: 'shaharzi', url: 'git@gitlab.rafael.co.il:devops/generic-jenkins-pipelines.git']]])
+        }
+    }
+}
+}
