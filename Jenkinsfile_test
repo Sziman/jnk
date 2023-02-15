@@ -1,3 +1,4 @@
+@Library('generic-jenkins-pipelines@main') _
 pipeline {
     agent { label "$nodeName" }
     stages {
