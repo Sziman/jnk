@@ -1,5 +1,5 @@
 FROM python:3.8
 WORKDIR /app
 COPY . /app
-RUN pip --no-cache-dir install -r requirements.txt
-CMD ["python3", "tst"]
+RUN pip requests
+CMD ["python3", "tst.py"]
