@@ -1,3 +1,4 @@
+@Library('devops_shared')
 pipeline {
     agent {
         node{
